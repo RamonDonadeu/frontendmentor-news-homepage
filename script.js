@@ -6,16 +6,16 @@ const background = document.getElementById("disableBack")
 
 openButton.addEventListener('click', () => {    
     navbar.classList.replace('nav--closed', 'nav--open')
-    background.classList.add('disableBack')
+    background.classList.replace('hideBack','disableBack')
 })
 
 
 closeButton.addEventListener('click', () => {
     navbar.classList.replace('nav--open', 'nav--closed')
-    background.classList.remove('disableBack')
+    background.classList.replace('disableBack','hideBack')
 })
 
 background.addEventListener('click', () => {
     navbar.classList.replace('nav--open', 'nav--closed')
-    background.classList.remove('disableBack')
+    background.classList.replace('disableBack','hideBack')
 })
