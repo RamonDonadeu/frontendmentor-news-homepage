@@ -1,0 +1,217 @@
+/* Global */
+@font-face {
+  font-family: Inter;
+  src: url("./assets/fonts/Inter-VariableFont_slnt,wght.ttf");
+}
+
+:root{
+  --softOrange: hsl(35, 77%, 62%);
+  --softRed: hsl(5, 85%, 63%);
+  --offWhite: hsl(36, 100%, 99%);
+  --grayBlue:hsl(233, 8%, 79%) ;
+  --darkGrayBlue: hsl(236, 13%, 42%);
+  --darkBlue: hsl(240, 100%, 5%);
+}
+
+body{  
+  font-family: Inter;
+  max-width: 1000px;
+  width: 80%;
+  height: calc(100vh - 6rem);
+  margin: 4rem auto 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  box-sizing: border-box;  
+}
+
+/*----------------------- Header -----------------------*/
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+header>nav{
+  display: flex;
+  flex-direction: row;
+}
+.nav--item{
+  color: var(--darkGrayBlue);
+  padding: 1rem;
+  transition: 0.3s;
+  
+}
+.nav--item:hover{
+  color: var(--softRed);
+  cursor: pointer;
+}
+
+/*----------------------- MainSection -----------------------*/
+.mainSection{
+  width: 100%;
+  height: 30rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+/* Section */
+.mainSection--left{
+  width: 64%;
+}
+.mainSection--left--image{
+  background-image: url("./assets/images/image-web-3-desktop.jpg");
+  width: 100%;
+  height: 50%;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  margin-bottom: 1rem;
+}
+.mainSection--left--content{
+  display: flex;
+  flex-direction: row;
+}
+.mainSection--title{
+  width: 45%;
+  padding: 1rem 4rem 0 0;
+  font-size: 2.9rem;
+  font-weight: 900;
+  margin: 0;
+}
+.mainSection--left--content-right{
+  padding-top: 1rem;
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.mainSection--left-text{
+  font-size: 0.9rem;
+  color: var(--darkGrayBlue);
+  font-weight: 100;
+  line-height: 1.2rem;
+}
+.mainSection--left--content-right>button{
+  background-color: var(--softRed);
+  color: var(--offWhite);
+  text-transform: capitalize;
+  padding: 0.9rem 2.3rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  border: none;
+  transition: 0.3s;
+}
+.mainSection--left--content-right>button:hover{
+  cursor: pointer;  
+  background-color: var(--darkBlue);
+}
+
+
+
+/* NEW */
+.mainSection--news{
+  width: 33.3333%;
+  height: 100%;
+  background-color: var(--darkBlue);
+  color: var(--offWhite);
+  padding: 0.5rem 1.5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;  
+}
+
+.mainSection--news--title{
+  font-size: 2rem;
+  font-weight: 900;
+  padding-top: 1.5rem;
+  color: var(--softOrange);
+}
+
+.mainSection--news--content{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.news--item{
+  margin-block: 1.4rem;
+}
+.news--itemTitle{
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding-bottom: 0.8rem;
+  transition: 0.3s;
+}
+.news--itemTitle:hover{
+  color: var(--softOrange);
+  cursor: pointer;
+}
+.news--itemContent{
+  color: var(--grayBlue);
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+}
+.news--separator{
+  border-bottom: 1px solid var(--darkGrayBlue);
+}
+
+
+
+/*----------------------- Numbered Section -----------------------*/
+
+.numberedSection{
+  display: flex;
+  flex-direction: row;
+}
+
+.numberedSection--item{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 33.3333%;
+}
+.numberedSection--img>img{
+  height: 7rem;
+}
+.numberedSection--content{
+  padding-inline: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.numberedSection--number{
+  font-size: 1.8rem;
+  color: var(--grayBlue);
+  font-weight: bold;
+}
+.numbredSection--title{
+  font-weight: 900;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+.numbredSection--title:hover{
+  color:var(--softRed);
+  cursor: pointer;
+}
+.numberedSection--text{
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--darkGrayBlue);
+  line-height: 1.3rem;
+}
+/* Frontend Mentor */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
