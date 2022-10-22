@@ -16,14 +16,14 @@
   </head>
   <body>
     <div class="disableBack" id="disableBack"></div>
-    <header>
+    <header role="banner">
       <div class="logo">
-        <img src="./assets/images/logo.svg" />
+        <img src="./assets/images/logo.svg" alt="Logo of webpage" />
       </div>
       <div class="mobile--nav" id="js--openNavbar">
         <img src="./assets/images/icon-menu.svg" alt="Open Menu" />
       </div>
-      <nav class="navbar nav--closed">
+      <nav class="navbar nav--closed" role="navigation">
         <div class="mobile--nav" id="js--closeNavbar">
           <img src="./assets/images/icon-menu-close.svg" alt="Open Menu" />
         </div>
@@ -34,7 +34,7 @@
         <div class="nav--item">Categories</div>
       </nav>
     </header>
-    <div class="mainSection">
+    <div class="mainSection" role="main">
       <div class="mainSection--left">
         <div class="mainSection--left--image"></div>
         <div class="mainSection--left--content">
@@ -77,7 +77,7 @@
         </div>
       </div>
     </div>
-    <div class="numberedSection">
+    <div class="numberedSection" role="contentinfo">
       <div class="numberedSection--item">
         <div class="numberedSection--img">
           <img
@@ -124,15 +124,17 @@
         </div>
       </div>
     </div>
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by
-      <a href="https://www.linkedin.com/in/ramon-donadeu/"
-        >Ramon Donadeu Caballero</a
-      >.
-    </div>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://www.linkedin.com/in/ramon-donadeu/"
+          >Ramon Donadeu Caballero</a
+        >.
+      </div>
+    </footer>
   </body>
   <script src="./script.js"></script>
 </html>
