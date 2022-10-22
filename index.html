@@ -15,11 +15,18 @@
     <title>Frontend Mentor | News homepage</title>
   </head>
   <body>
+    <div class="disableBack" id="disableBack"></div>
     <header>
       <div class="logo">
         <img src="./assets/images/logo.svg" />
       </div>
-      <nav>
+      <div class="mobile--nav" id="js--openNavbar">
+        <img src="./assets/images/icon-menu.svg" alt="Open Menu" />
+      </div>
+      <nav class="navbar nav--closed">
+        <div class="mobile--nav" id="js--closeNavbar">
+          <img src="./assets/images/icon-menu-close.svg" alt="Open Menu" />
+        </div>
         <div class="nav--item">Home</div>
         <div class="nav--item">New</div>
         <div class="nav--item">Popular</div>
@@ -127,4 +134,5 @@
       >.
     </div>
   </body>
+  <script src="./script.js"></script>
 </html>

@@ -26,6 +26,15 @@ body{
   box-sizing: border-box;  
 }
 
+/* Responsive */
+@media (max-width:750px) {
+  body{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+  }  
+}
+
 /*----------------------- Header -----------------------*/
 header{
   display: flex;
@@ -36,19 +45,82 @@ header{
   display: flex;
   align-items: center;
 }
-header>nav{
+.navbar{
   display: flex;
   flex-direction: row;
 }
 .nav--item{
   color: var(--darkGrayBlue);
-  padding: 1rem;
+  padding-block: 1rem;
   transition: 0.3s;
-  
+  display: flex;
+  justify-content: end;
+  margin-left: 2rem;
 }
 .nav--item:hover{
   color: var(--softRed);
   cursor: pointer;
+}
+.mobile--nav{
+  display: none;
+}
+div#js--closeNavbar {
+  height: 40px;
+}
+
+@media (max-width: 750px) {
+  header{
+    margin-top: 2rem;
+    z-index: 2;
+  }
+  .mobile--nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar{
+    position: fixed;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--offWhite);
+    height: 100%;
+    z-index: 3; 
+    overflow: hidden;
+    top:0;
+    padding-top: 2rem;
+  }
+  .disableBack{
+    height: 100vh;
+    width: 100vh;
+    z-index: 1;
+    position: fixed;
+    background-color: rgba(0, 0,0, 0.4);
+    top: 0%;
+    left: 0;
+  }
+  .nav--closed{
+    transition: 0.5s;
+    width: 0%;
+  }
+  .nav--open{
+    transition: 0.5s;
+    width: 65%;   
+  }
+  .nav--item{
+    justify-content: start;
+    margin-right: 7rem;
+  }
+  #js--closeNavbar{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding-bottom: 4rem;
+  }
+  #js--closeNavbar>img{
+    padding-right: 2rem;
+  }
 }
 
 /*----------------------- MainSection -----------------------*/
@@ -62,29 +134,31 @@ header>nav{
 /* Section */
 .mainSection--left{
   width: 64%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .mainSection--left--image{
   background-image: url("./assets/images/image-web-3-desktop.jpg");
   width: 100%;
-  height: 50%;
+  height: 60%;
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
-  margin-bottom: 1rem;
+  
 }
 .mainSection--left--content{
+  height: 35%;
   display: flex;
   flex-direction: row;
 }
 .mainSection--title{
   width: 45%;
-  padding: 1rem 4rem 0 0;
   font-size: 2.9rem;
   font-weight: 900;
   margin: 0;
 }
 .mainSection--left--content-right{
-  padding-top: 1rem;
   width: 55%;
   display: flex;
   flex-direction: column;
@@ -95,7 +169,7 @@ header>nav{
   font-size: 0.9rem;
   color: var(--darkGrayBlue);
   font-weight: 100;
-  line-height: 1.2rem;
+  line-height: 1.5rem;
 }
 .mainSection--left--content-right>button{
   background-color: var(--softRed);
@@ -112,6 +186,37 @@ header>nav{
   background-color: var(--darkBlue);
 }
 
+/* Responsive */
+@media (max-width: 750px) {
+  .mainSection{
+    flex-direction: column;
+    height: 100%;    
+    padding-bottom: 3rem;
+  }
+  .mainSection--left{
+    width: 100%;
+  }
+  .mainSection--left--image{
+    aspect-ratio: 1/1;
+    background-image: url("./assets/images/image-web-3-mobile.jpg");  
+    background-size: contain;
+  }
+  .mainSection--left--content{
+    flex-direction: column;
+    width: 100%;    
+    padding-bottom: 1rem;
+  }
+  .mainSection--title{
+    width: 100%;
+    padding-bottom: 1rem;}
+  .mainSection--left--content-right{
+    width: 100%;
+    padding-bottom: 2rem;
+  }
+  .mainSection--left-text{    
+    padding-bottom: 1rem;
+  }
+}
 
 
 /* NEW */
@@ -163,6 +268,10 @@ header>nav{
   border-bottom: 1px solid var(--darkGrayBlue);
 }
 
+@media (max-width: 750px) {
+  .mainSection--news{
+    width: 100%;
+  }}
 
 
 /*----------------------- Numbered Section -----------------------*/
@@ -202,11 +311,25 @@ header>nav{
   cursor: pointer;
 }
 .numberedSection--text{
-  font-weight: 700;
-  font-size: 0.8rem;
+  font-weight: 200;
+  font-size: 0.9rem;
   color: var(--darkGrayBlue);
   line-height: 1.3rem;
 }
+
+/* Responsive */
+
+@media (max-width: 750px) {
+  .numberedSection{
+    flex-direction: column;
+    padding-bottom: 2rem;
+  }
+  .numberedSection--item{
+    width: 100%;
+    padding-bottom: 1.5rem;
+  }
+}
+
 /* Frontend Mentor */
 .attribution {
     font-size: 11px;
@@ -214,4 +337,10 @@ header>nav{
   }
   .attribution a {
     color: hsl(228, 45%, 44%);
+  }
+
+  @media (max-width: 750px) {
+    .attribution{
+      padding-bottom: 3rem;
+    }
   }
