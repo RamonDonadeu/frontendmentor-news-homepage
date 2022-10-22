@@ -17,8 +17,8 @@ body{
   font-family: Inter;
   max-width: 1000px;
   width: 80%;
-  height: calc(100vh - 7rem);
-  margin: 5rem auto 2rem;
+  height: calc(100vh - 6rem);
+  margin: 4rem auto 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -142,14 +142,13 @@ div#js--closeNavbar {
 .mainSection--left--image{
   background-image: url("./assets/images/image-web-3-desktop.jpg");
   width: 100%;
-  height: 60%;
+  height: 55%;
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
   
 }
 .mainSection--left--content{
-  height: 35%;
   display: flex;
   flex-direction: row;
 }
@@ -237,7 +236,7 @@ div#js--closeNavbar {
 .mainSection--news--title{
   font-size: 2rem;
   font-weight: 900;
-  padding-top: 1.5rem;
+  padding-top: 1rem;
   color: var(--softOrange);
 }
 
